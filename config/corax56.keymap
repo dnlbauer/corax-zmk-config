@@ -171,6 +171,18 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
 
+        nav_layer {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                      &trans    &trans        &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                      &trans    &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &kp LEFT  &kp DOWN  &kp UP_ARROW  &kp UP  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans    &trans        &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans    &trans    &trans        &trans
+            >;
+
+            label = "Navigation";
+        };
+
         adjust_layer {
             label = "Adjust";
             bindings = <
