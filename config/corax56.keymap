@@ -161,11 +161,11 @@
         sym_layer {
             label = "Symbols";
             bindings = <
-                      &kp F1  &kp F2  &kp F3  &kp F4    &tdrstl                       &kp F6    &kp F7     &kp F8      &kp F9    &kp F10
-           &trans  &kp SLASH  &trans  &trans  &trans   &kp PLUS                     &kp EXCL    &kp AT   &kp HASH  &kp DOLLAR  &kp PRCNT    &kp F11
-&trans  &ud_grave     &trans  &trans  &trans  &trans  &kp EQUAL                    &ud_caret  &kp AMPS   &kp STAR    &kp LPAR   &kp RPAR  &ud_tilde  &trans
-           &trans   &kp STAR  &trans  &trans  &trans  &kp MINUS  &trans    &trans   &kp LBKT  &kp RBKT  &kp UNDER    &kp PIPE   &kp BSLH     &trans
-                                      &trans  &trans     &trans  &trans    &trans     &trans    &trans     &trans
+                   &kp F1  &kp F2  &kp F3  &kp F4  &tdrstl                    &kp F6     &kp F7    &kp F8    &kp F9   &kp F10
+           &trans  &trans  &trans  &trans  &trans   &trans                    &trans  &ud_grave  &kp LBRC  &kp RBRC    &trans    &kp F11
+&trans  &ud_grave  &trans  &trans  &trans  &trans   &trans                    &trans    &ud_sqt  &kp LBKT  &kp RBKT  &kp SEMI  &ud_tilde  &trans
+           &trans  &trans  &trans  &trans  &trans   &trans  &trans    &trans  &trans   &kp HASH    &kp LT    &kp GT    &trans     &trans
+                                   &trans  &trans   &trans  &trans    &trans  &trans     &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
