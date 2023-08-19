@@ -122,11 +122,11 @@
         colemak_layer {
             label = "Colemak";
             bindings = <
-                         &kp N1  &kp N2    &kp N3    &kp N4     &kp N5                               &kp N6    &kp N7     &kp N8   &kp N9     &kp N0
-                &kp TAB   &kp Q   &kp W     &kp F     &kp P      &kp B                                &kp J     &kp L      &kp U    &kp Y   &kp SEMI        &kp BSPC
-&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T      &kp G                                &kp M     &kp N      &kp E    &kp I      &kp O         &ud_sqt  &kp RC(RA(F13))
-         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D      &kp V  &kp C_MUTE     &kp C_PP       &kp K     &kp H  &kp COMMA  &kp DOT  &kp SLASH  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lt 3 ESC   &kp SPACE    &kp ENTER  &lt 2 BSPC  &kp RALT   &kp RGUI
+                         &kp N1  &kp N2    &kp N3    &kp N4  &kp N5                              &kp N6    &kp N7     &kp N8   &kp N9     &kp N0
+                &kp TAB   &kp Q   &kp W     &kp F     &kp P   &kp B                               &kp J     &kp L      &kp U    &kp Y   &kp SEMI        &kp BSPC
+&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T   &kp G                               &kp M     &kp N      &kp E    &kp I      &kp O         &ud_sqt  &kp RC(RA(F13))
+         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D   &kp V  &kp C_MUTE     &kp C_PP      &kp K     &kp H  &kp COMMA  &kp DOT  &kp SLASH  &mt RSHFT RBRC
+                                         &kp LGUI  &kp LALT   &mo 3   &kp SPACE    &kp ENTER  &lt 2 ESC  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
