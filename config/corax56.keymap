@@ -88,9 +88,14 @@
     combos {
         compatible = "zmk,combos";
 
-        new_combo {
+        gm_capsword {
             bindings = <&caps_word>;
             key-positions = <28 29>;
+        };
+
+        sticky_adjust {
+            bindings = <&sl 5>;
+            key-positions = <51 56>;
         };
     };
 
