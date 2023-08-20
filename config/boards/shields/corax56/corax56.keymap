@@ -11,37 +11,28 @@
 #define ADJUST 5
 
 // tapdance timing
-
 #define TAPTERM 100
 
 // additional caps word keys
-
 &caps_word {
     continue-list = <UNDERSCORE MINUS LS(MINUS) UP DOWN LEFT RIGHT BSPC DEL>;
 };
 
 // faster layertap
-
 &lt {
     quick-tap-ms = <0>;
     tapping-term-ms = <150>;
 };
 
 // faster modtap
-
 &mt {
     tapping-term-ms = <200>;
 };
 
 / {
-    behaviors {
-        // F5 / double tap reset 
-        // F6 / double tap reset
-    };
 
     macros {
         // undead `
-
         ud_grave: ud_grave {
             label = "UNDEAD_GRAVE";
             compatible = "zmk,behavior-macro";
@@ -52,7 +43,6 @@
         };
 
         // undead ~
-
         ud_tilde: ud_tilde {
             label = "UNDEAD_TILDE";
             compatible = "zmk,behavior-macro";
@@ -63,7 +53,6 @@
         };
 
         // undead ^
-
         ud_caret: ud_caret {
             label = "UNDEAD_CARET";
             compatible = "zmk,behavior-macro";
@@ -74,7 +63,6 @@
         };
 
         // undead "
-
         ud_sqt: ud_sqt {
             label = "UNDEAD_SINGLE_QUOTE";
             compatible = "zmk,behavior-macro";
@@ -90,11 +78,13 @@
 
         gm_capsword {
             bindings = <&caps_word>;
+            // caps on G+M
             key-positions = <28 29>;
         };
 
         sticky_adjust {
             bindings = <&sl 5>;
+            // sticky adjust layer on LALT+RALT
             key-positions = <51 56>;
         };
     };
