@@ -62,7 +62,7 @@
             bindings = <&kp CARET &kp SPACE>;
         };
 
-        // undead "
+        // undead '
         ud_sqt: ud_sqt {
             label = "UNDEAD_SINGLE_QUOTE";
             compatible = "zmk,behavior-macro";
@@ -71,6 +71,17 @@
             tap-ms = <10>;
             bindings = <&kp SQT &kp SPACE>;
         };
+
+        // undead "
+        ud_dqt: ud_dqt {
+            label = "UNDEAD_DOUBLE_QUOTE";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp LS(SQT) &kp SPACE>;
+        };
+
     };
 
     combos {
@@ -123,7 +134,7 @@
             bindings = <
                       &kp F1     &kp F2     &kp F3     &kp F4  &kp F5                    &kp F6     &kp F7    &kp F8    &kp F9   &kp F10
         &kp LA(F4)    &trans   &kp BSLH  &kp PRCNT   &kp DLLR  &trans                    &trans  &ud_caret  &kp LBRC  &kp RBRC    &trans  &kp F11
-&trans      &trans  &kp STAR   &kp LPAR   &kp RPAR  &kp COLON  &trans                    &trans    &kp DQT  &kp LBKT  &kp RBKT  &kp SEMI   &trans  &trans
+&trans      &trans  &kp STAR   &kp LPAR   &kp RPAR  &kp COLON  &trans                    &trans    &ud_dqt  &kp LBKT  &kp RBKT  &kp SEMI   &trans  &trans
             &trans    &trans  &ud_grave     &kp AT   &kp AMPS  &trans  &trans    &trans  &trans   &kp HASH    &kp LT    &kp GT    &trans   &trans
                                             &trans     &trans  &trans  &trans    &trans  &trans     &trans    &trans
             >;
@@ -149,7 +160,7 @@
             bindings = <
                 &trans  &trans  &trans  &trans  &trans                        &trans     &trans        &trans           &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &caps_word    &kp INS     &kp PSCRN  &kp PAUSE_BREAK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &kp LEFT   &kp DOWN  &kp UP_ARROW           &kp UP  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp HOME  &kp PG_DN     &kp PG_UP          &kp END  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans      &trans     &trans        &trans
             >;
