@@ -106,14 +106,14 @@
         colemak_layer {
             label = "Colemak";
             bindings = <
-                         &kp N1  &kp N2    &kp N3    &kp N4       &kp N5                                      &kp N6    &kp N7     &kp N8   &kp N9    &kp N0
-                &kp TAB   &kp Q   &kp W     &kp F     &kp P        &kp B                                       &kp J     &kp L      &kp U    &kp Y  &kp SEMI        &kp BSPC
-&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T        &kp G                                       &kp M     &kp N      &kp E    &kp I     &kp O   &kp BACKSPACE  &kp RC(RA(F13))
-         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D        &kp V  &kp C_MUTE     &kp C_PP              &kp K     &kp H  &kp COMMA  &kp DOT   &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lt SYM ESC   &kp SPACE    &kp ENTER  &lt NUM BACKSPACE  &kp RALT   &kp RGUI
+                         &kp N1  &kp N2    &kp N3    &kp N4       &kp N5                                          &kp N6    &kp N7     &kp N8   &kp N9    &kp N0
+                &kp TAB   &kp Q   &kp W     &kp F     &kp P        &kp B                                           &kp J     &kp L      &kp U    &kp Y  &kp SEMI        &kp BSPC
+&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T        &kp G                                           &kp M     &kp N      &kp E    &kp I     &kp O   &kp BACKSPACE  &kp RC(RA(F13))
+         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D        &kp V  &kp C_MUTE     &kp C_PP                  &kp K     &kp H  &kp COMMA  &kp DOT   &kp DEL  &mt RSHFT RBRC
+                                         &kp LGUI  &kp LALT  &lt SYM BSPC &kp SPACE    &lt NAV ENTER  &lt NUM ESC &kp RALT   &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         qwerty_layer {
@@ -126,7 +126,7 @@
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         sym_layer {
@@ -139,7 +139,7 @@
                                             &trans     &trans  &trans  &trans    &trans  &trans     &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         num_layer {
@@ -147,12 +147,12 @@
             bindings = <
                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6    &kp F7     &kp F8     &kp F9  &kp F10
         &trans     &trans  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp PIPE  &kp UNDER  &kp SLASH   &trans  &kp F11
-&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &ud_sqt  &kp MINUS  &kp EQUAL  &mo NAV   &trans  &trans
+&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &ud_sqt  &kp MINUS  &kp EQUAL   &trans   &trans  &trans
         &trans  &ud_tilde  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &trans  &kp PLUS  &kp QMARK   &kp EXCL  &kp DEL   &trans
                                    &trans  &trans  &kp N0  &trans    &trans  &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
         nav_layer {
@@ -178,7 +178,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp PG_DN PG_UP>;
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
     };
 };
