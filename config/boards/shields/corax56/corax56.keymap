@@ -147,8 +147,8 @@
             bindings = <
                    &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6    &kp F7     &kp F8     &kp F9  &kp F10
         &trans     &trans  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp PIPE  &kp UNDER  &kp SLASH   &trans  &kp F11
-&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &ud_sqt  &kp MINUS  &kp EQUAL   &trans   &trans  &trans
-        &trans  &ud_tilde  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &trans  &kp PLUS  &kp QMARK   &kp EXCL  &kp DEL   &trans
+&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &ud_sqt  &kp MINUS  &kp EQUAL   &kp DEL  &trans  &trans
+        &trans  &ud_tilde  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &trans  &kp PLUS  &kp QMARK   &kp EXCL   &mo NAV  &trans
                                    &trans  &trans  &kp N0  &trans    &trans  &trans    &trans     &trans
             >;
 
@@ -158,11 +158,11 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                        &trans     &trans        &trans           &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &caps_word    &kp INS     &kp PSCRN  &kp PAUSE_BREAK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp HOME  &kp PG_DN     &kp PG_UP          &kp END  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans      &trans     &trans        &trans
+                &trans    &trans    &trans   &trans  &trans                              &trans     &trans        &trans           &trans  &trans
+        &trans  &kp LC(Q) &kp LC(W) &kp LC(F) &kp LC(P) &kp LC(B)                    &caps_word    &kp INS     &kp PSCRN  &kp PAUSE_BREAK  &trans  &trans
+&trans  &trans  &kp LC(A) &kp LC(R) &kp LC(S) &kp LC(T) &kp LC(G)                      &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT  &trans  &trans  &trans
+        &trans  &kp LC(Z) &kp LC(X) &kp LC(C) &kp LC(D) &kp LC(V)  &trans    &trans    &kp HOME  &kp PG_DN     &kp PG_UP          &kp END  &trans  &trans
+                                       &trans    &trans    &trans  &trans    &trans      &trans     &trans        &trans
             >;
         };
 
