@@ -113,7 +113,7 @@
                                          &kp LGUI  &kp LALT  &lt SYM BSPC &kp SPACE    &lt NAV ENTER  &lt NUM ESC &kp RALT   &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         qwerty_layer {
@@ -126,7 +126,7 @@
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         sym_layer {
@@ -139,7 +139,7 @@
                                             &trans     &trans  &trans  &trans    &trans  &trans     &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         num_layer {
@@ -152,7 +152,7 @@
                                    &trans  &trans  &kp N0  &trans    &trans  &trans    &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_VOL_DN C_VOL_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
         };
 
         nav_layer {
@@ -178,7 +178,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp C_VOL_DN C_VOL_UP>,
-                <&inc_dec_kp C_VOL_DN C_VOL_UP>;
+                <&inc_dec_kp C_PREV C_NEXT>;
         };
     };
 };
