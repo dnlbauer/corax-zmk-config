@@ -11,28 +11,32 @@
 #define ADJUST 5
 
 // tapdance timing
+
 #define TAPTERM 100
 
 // additional caps word keys
+
 &caps_word {
     continue-list = <UNDERSCORE MINUS LS(MINUS) UP DOWN LEFT RIGHT BSPC DEL>;
 };
 
 // faster layertap
+
 &lt {
     quick-tap-ms = <0>;
     tapping-term-ms = <150>;
 };
 
 // faster modtap
+
 &mt {
     tapping-term-ms = <200>;
 };
 
 / {
-
     macros {
         // undead `
+
         ud_grave: ud_grave {
             label = "UNDEAD_GRAVE";
             compatible = "zmk,behavior-macro";
@@ -43,6 +47,7 @@
         };
 
         // undead ~
+
         ud_tilde: ud_tilde {
             label = "UNDEAD_TILDE";
             compatible = "zmk,behavior-macro";
@@ -53,6 +58,7 @@
         };
 
         // undead ^
+
         ud_caret: ud_caret {
             label = "UNDEAD_CARET";
             compatible = "zmk,behavior-macro";
@@ -63,6 +69,7 @@
         };
 
         // undead '
+
         ud_sqt: ud_sqt {
             label = "UNDEAD_SINGLE_QUOTE";
             compatible = "zmk,behavior-macro";
@@ -73,6 +80,7 @@
         };
 
         // undead "
+
         ud_dqt: ud_dqt {
             label = "UNDEAD_DOUBLE_QUOTE";
             compatible = "zmk,behavior-macro";
@@ -81,7 +89,6 @@
             tap-ms = <10>;
             bindings = <&kp LS(SQT) &kp SPACE>;
         };
-
     };
 
     combos {
@@ -89,13 +96,17 @@
 
         gm_capsword {
             bindings = <&caps_word>;
+
             // caps on G+M
+
             key-positions = <28 29>;
         };
 
         sticky_adjust {
             bindings = <&sl 5>;
+
             // sticky adjust layer on LALT+RALT
+
             key-positions = <51 56>;
         };
     };
@@ -106,11 +117,11 @@
         colemak_layer {
             label = "Colemak";
             bindings = <
-                         &kp N1  &kp N2    &kp N3    &kp N4       &kp N5                                          &kp N6    &kp N7     &kp N8   &kp N9    &kp N0
-                &kp TAB   &kp Q   &kp W     &kp F     &kp P        &kp B                                           &kp J     &kp L      &kp U    &kp Y  &kp SEMI        &kp BSPC
-&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T        &kp G                                           &kp M     &kp N      &kp E    &kp I     &kp O   &kp BACKSPACE  &kp RC(RA(F13))
-         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D        &kp V  &kp C_MUTE     &kp C_PP                  &kp K     &kp H  &kp COMMA  &kp DOT   &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lt SYM BSPC &kp SPACE    &lt NAV ENTER  &lt NUM ESC &kp RALT   &kp RGUI
+                         &kp N1  &kp N2    &kp N3    &kp N4        &kp N5                                    &kp N6    &kp N7     &kp N8   &kp N9    &kp N0
+                &kp TAB   &kp Q   &kp W     &kp F     &kp P         &kp B                                     &kp J     &kp L      &kp U    &kp Y  &kp SEMI        &kp BSPC
+&kp ESC       &kp LCTRL   &kp A   &kp R     &kp S     &kp T         &kp G                                     &kp M     &kp N      &kp E    &kp I     &kp O   &kp BACKSPACE  &kp RC(RA(F13))
+         &mt LSHFT LBRC   &kp Z   &kp X     &kp C     &kp D         &kp V  &kp C_MUTE         &kp C_PP        &kp K     &kp H  &kp COMMA  &kp DOT   &kp DEL  &mt RSHFT RBRC
+                                         &kp LGUI  &kp LALT  &lt SYM BSPC   &kp SPACE    &lt NAV ENTER  &lt NUM ESC  &kp RALT   &kp RGUI
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -132,11 +143,11 @@
         sym_layer {
             label = "Symbols";
             bindings = <
-                      &kp F1     &kp F2     &kp F3     &kp F4  &kp F5                    &kp F6     &kp F7    &kp F8    &kp F9   &kp F10
-        &kp LA(F4)    &trans   &kp BSLH  &kp PRCNT   &kp DLLR  &trans                    &trans  &ud_caret  &kp LBRC  &kp RBRC    &trans  &kp F11
-&trans      &trans  &kp STAR   &kp LPAR   &kp RPAR  &kp COLON  &trans                    &trans    &ud_dqt  &kp LBKT  &kp RBKT  &kp SEMI   &trans  &trans
-            &trans    &trans  &ud_grave     &kp AT   &kp AMPS  &trans  &trans    &trans  &trans   &kp HASH    &kp LT    &kp GT    &trans   &trans
-                                            &trans     &trans  &trans  &trans    &trans  &trans     &trans    &trans
+                      &kp F1     &kp F2     &kp F3     &kp F4  &kp F5                    &kp F6    &kp F7    &kp F8    &kp F9   &kp F10
+        &kp LA(F4)    &trans   &kp BSLH  &kp PRCNT   &kp DLLR  &trans                    &trans   &ud_sqt  &kp LBRC  &kp RBRC    &trans  &kp F11
+&trans      &trans  &kp STAR   &kp LPAR   &kp RPAR  &kp COLON  &trans                    &trans   &ud_dqt  &kp LBKT  &kp RBKT  &kp SEMI   &trans  &trans
+            &trans    &trans  &ud_grave     &kp AT   &kp AMPS  &trans  &trans    &trans  &trans  &kp HASH    &kp LT    &kp GT    &trans   &trans
+                                            &trans     &trans  &trans  &trans    &trans  &trans    &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -145,11 +156,11 @@
         num_layer {
             label = "Numbers";
             bindings = <
-                   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6    &kp F7     &kp F8     &kp F9  &kp F10
-        &trans     &trans  &kp N4  &kp N5  &kp N6  &trans                    &trans  &kp PIPE  &kp UNDER  &kp SLASH   &trans  &kp F11
-&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &ud_sqt  &kp MINUS  &kp EQUAL   &trans   &trans  &trans
-        &trans  &ud_tilde  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &trans  &kp PLUS  &kp QMARK   &kp EXCL  &kp DEL   &trans
-                                   &trans  &trans  &kp N0  &trans    &trans  &trans    &trans     &trans
+                   &kp F1  &kp F2  &kp F3  &kp F4  &kp F5                    &kp F6     &kp F7     &kp F8     &kp F9    &kp F10
+        &trans     &trans  &kp N4  &kp N5  &kp N6  &trans                    &trans   &kp PIPE  &kp UNDER  &kp SLASH     &trans  &kp F11
+&trans  &trans    &kp DOT  &kp N1  &kp N2  &kp N3  &trans                    &trans   &kp PLUS  &kp MINUS  &kp EQUAL  &ud_caret   &trans  &trans
+        &trans  &ud_tilde  &kp N7  &kp N8  &kp N9  &trans  &trans    &trans  &trans  &ud_caret  &kp QMARK   &kp EXCL    &kp DEL   &trans
+                                   &trans  &trans  &kp N0  &trans    &trans  &trans     &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -158,11 +169,11 @@
         nav_layer {
             label = "Navigation";
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                        &trans     &trans        &trans           &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &caps_word    &kp INS     &kp PSCRN  &kp PAUSE_BREAK  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &kp LEFT   &kp DOWN        &kp UP        &kp RIGHT  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp HOME  &kp PG_DN     &kp PG_UP          &kp END  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans      &trans     &trans        &trans
+                &trans  &trans  &trans  &trans  &trans                        &trans     &trans     &trans           &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &caps_word    &kp INS  &kp PSCRN  &kp PAUSE_BREAK  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                      &kp LEFT   &kp DOWN     &kp UP        &kp RIGHT  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &kp HOME  &kp PG_DN  &kp PG_UP          &kp END  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans      &trans     &trans     &trans
             >;
         };
 
