@@ -158,9 +158,9 @@
             label = "Symbols";
             bindings = <
                      &kp F1    &kp F2     &kp F3     &kp F4  &kp F5                      &kp F6     &kp F7     &kp F8    &kp F9   &kp F10
-             &trans  &none   &kp BSLH  &kp PRCNT   &kp DLLR  &kp RALT(LS(S))              &none    &kp PIPE  &ud_caret &kp SLASH     &none  &kp F11
-&kp LA(ESC)  &trans  &none   &kp LPAR   &kp RPAR  &kp COLON  &asc_arr                     &none     &ud_dqt  &kp UNDER  &kp LBKT  &kp RBKT   &trans  &trans
-             &trans  &none  &ud_grave     &kp AT   &kp AMPS  &kp SEMI  &trans     &trans  &none    &kp HASH  &kp QMARK  &kp EXCL    &trans   &trans
+             &trans  &none   &kp BSLH  &kp PRCNT   &kp DLLR  &kp RALT(LS(S))              &none    &kp PIPE  &ud_caret &kp SLASH  &kp RALT(5) &kp F11
+&kp LA(ESC)  &trans  &none   &kp LPAR   &kp RPAR  &kp COLON  &asc_arr                     &none     &ud_dqt  &kp UNDER  &kp LBKT  &kp RBKT     &trans  &trans
+             &trans  &none  &ud_grave     &kp AT   &kp AMPS  &kp SEMI  &trans     &trans  &none    &kp HASH  &kp QMARK  &kp EXCL    &trans     &trans
                                           &trans     &trans  &trans    &trans     &trans &trans      &trans     &trans
             >;
 
