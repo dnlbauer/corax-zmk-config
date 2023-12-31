@@ -82,6 +82,17 @@
             bindings = <&kp LS(SQT) &kp SPACE>;
         };
 
+        // ascii arrow ->
+        asc_arr: asc_arr {
+            label = "ASCII_ARROW";
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <10>;
+            tap-ms = <10>;
+            bindings = <&kp MINUS &kp LS(DOT)>;
+        };
+
+
     };
 
     combos {
