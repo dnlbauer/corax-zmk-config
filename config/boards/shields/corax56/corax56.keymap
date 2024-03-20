@@ -117,8 +117,8 @@
             display-name = "Colemak";
             bindings = <
                             &kp N1	&kp N2  &kp N3	    &kp N4	                                            &kp N5	    &kp N6	    &kp N7	    &kp N8	&kp N9	&kp N0
-        &kp TAB	            &kp Q	&kp W	&kp F	    &kp P       &kp B	                                &kp J	    &kp L	    &kp U	    &kp Y	&ud_sqt	&kp RC(RA(F13)) 
-&kp ESC 	&bt BT_CLR		&bt BT_CLR	   &kp R   &kp S       &kp T       &kp G                                   &kp M       &kp N       &kp E       &kp I   &kp O   &kp BSPC  &kp RC(RA(F13))
+        &kp TAB	            &kp Q	&kp W	&kp F	    &kp P       &kp B	                                &kp J	    	&bt BT_CLR_ALL		    &kp U	    &kp Y	&ud_sqt	&kp RC(RA(F13)) 
+&kp ESC 	&bt BT_CLR_ALL		&bt BT_CLR_ALL	   &kp R   &kp S       &kp T       &kp G                                   &kp M       &kp N       &kp E       &kp I   &kp O   &kp BSPC  &kp RC(RA(F13))
         &mt LSHFT LBRC    &kp Z	&kp X	&kp C	    &kp D	    &kp V	        &kp C_MUTE	&kp C_PP    &kp K	    &kp H	    &kp COMMA	&kp DOT	&kp DEL	&mt RSHFT RBRC
                                                                                          &kp P  &kp P  &kp P  &kp P  &kp A  &kp B  &kp C  &kp D 
 
