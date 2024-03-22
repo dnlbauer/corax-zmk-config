@@ -165,9 +165,9 @@
             display-name = "Symbols";
             bindings = <
                 &trans  &trans     &trans     &trans     &trans                           &trans      &trans      &trans      &trans      &trans
-        &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &none       &kp RA(N5)  &kp RA(N6)  &kp GRAVE   &kp LS(N7)     &kp F11
-&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &none       &kp EQUAL   &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp LS(GRAVE)  &kp RA(N7)
-        &trans  &none   &ud_grave  &kp AT     &kp AMPS   &none          &trans    &trans  &none       &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans
+        &trans  &none     &trans  &trans  &trans  &trans                    &none       &kp RA(N5) &kp RA(N6) &kp GRAVE &kp LS(N7)      &none 
+&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &kp EQUAL &kp LS(N8) &kp LS(N9) &kp LS(N0) &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
+        &trans     &trans  &trans  &trans  &trans   &trans         &trans    &trans  &none       &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans
                                    &trans     &trans     &trans         &trans    &trans  &mo DOUBLE  &trans      &trans
             >;
 
