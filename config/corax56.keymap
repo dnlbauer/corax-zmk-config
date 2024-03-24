@@ -123,11 +123,11 @@
         dvorak {
             display-name = "Colemak";
             bindings = <
-              &trans   &trans     &trans      &trans  &trans                              &trans     &trans  &trans  &trans  &trans
-       &none  &none    &kp COMMA  &kp PERIOD  &kp P   &none                               &none      &kp G   &kp C   &kp T   &none              &none
-&none  &none  &kp A    &kp O      &kp E       &kp I   &kp U                               &kp H      &kp D   &kp R   &kp N   &kp S              &none  &none
-       &none  &kp TAB  &kp Q      &kp J       &kp K   &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp RG(BACKSPACE)  &none
-                                  &none       &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
+                     &trans   &trans     &trans      &trans  &trans                              &trans     &trans  &trans  &trans  &trans
+       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &none                               &none      &kp G   &kp C   &kp T   &none              &none
+&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                               &kp H      &kp D   &kp R   &kp N   &kp S              &none  &none
+       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp RG(BACKSPACE)  &none
+                                         &none       &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -136,11 +136,11 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                &trans     &trans    &trans            &trans    &trans                    &trans  &trans    &trans             &trans    &trans
-        &trans  &trans     &trans    &trans            &trans    &trans                    &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &kp G                     &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
-        &trans  &trans     &trans    &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans             &trans    &trans     &trans
-                                     &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans
+                        &trans     &trans    &trans            &trans    &trans                    &trans  &trans    &trans             &trans    &trans
+        &trans          &trans     &trans    &trans            &trans    &trans                    &trans  &trans    &trans             &trans    &trans     &trans
+&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &kp G                     &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
+        &trans          &trans     &trans    &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans             &trans    &trans     &trans
+                                             &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
