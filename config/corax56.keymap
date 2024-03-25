@@ -126,7 +126,7 @@
                      &trans   &trans     &trans      &trans  &trans                              &trans     &trans  &trans  &trans  &trans
        &none         &none    &kp COMMA  &kp PERIOD  &kp P   &none                               &none      &kp G   &kp C   &kp T   &none              &none
 &none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                               &kp H      &kp D   &kp R   &kp N   &kp S              &none  &none
-       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp RG(BACKSPACE)  &none
+       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
                                          &none       &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
             >;
 
