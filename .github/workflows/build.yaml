@@ -1,6 +1,6 @@
 on:
   push:
-    branches: [ "main", "main2", "rotary2" ]
+    branches: [ "main", "main2", "rotary2","rotary3"  ]
   pull_request_target:
     branches: [ "main" ]
 concurrency:
