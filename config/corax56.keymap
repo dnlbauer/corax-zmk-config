@@ -136,14 +136,16 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                        &trans     &trans    &trans            &trans    &kp B                       &trans  &trans    &trans             &trans    &trans
-        &trans          &trans     &trans    &trans            &trans    &trans                      &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                      &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
-        &trans          &trans     &trans    &trans            &trans    &trans  &kp LGUI    &trans  &trans  &trans    &trans             &trans    &trans     &trans
-                                             &trans            &trans    &trans  &trans      &trans  &trans  &trans    &trans
+                        &trans     &trans    &trans            &trans    &kp B                         &trans  &trans    &trans             &trans    &trans
+        &trans          &trans     &trans    &trans            &trans    &trans                        &trans  &trans    &trans             &trans    &trans     &trans
+&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                        &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
+        &trans          &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI  &trans  &trans    &trans             &trans    &trans     &trans
+                                             &trans            &trans    &trans  &trans      &trans    &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp LS(TAB) TAB>, <&inc_dec_kp B W>;
+            sensor-bindings =
+                <&inc_dec_kp LS(TAB) TAB>,
+                <&inc_dec_kp TAB RS(TAB)>;
         };
 
         alt {
@@ -196,11 +198,11 @@
         number {
             display-name = "numbers";
             bindings = <
-                &none      &none      &none      &none         &none                     &none      &none         &none         &none         &none
-        &trans  &none      &kp COMMA  &kp DOT    &trans        &none                     &none      &kp N7        &kp N8        &kp N9        &none   &trans
-&trans  &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &none                     &kp RIGHT_BRACKET   &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
-        &trans  &none      &none      &none      &none         &none   &trans    &trans  &kp SLASH  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &trans
-                                      &trans     &trans        &trans  &trans    &mo 7   &kp SLASH  &trans        &trans
+                &none      &none      &none      &none         &none                     &none              &none         &none         &none         &none
+        &trans  &none      &kp COMMA  &kp DOT    &trans        &none                     &none              &kp N7        &kp N8        &kp N9        &none   &trans
+&trans  &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &none                     &kp RIGHT_BRACKET  &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
+        &trans  &none      &none      &none      &none         &none   &trans    &trans  &kp SLASH          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &trans
+                                      &trans     &trans        &trans  &trans    &mo 7   &kp SLASH          &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
