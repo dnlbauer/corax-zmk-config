@@ -123,11 +123,11 @@
         dvorak {
             display-name = "Colemak";
             bindings = <
-                     &trans   &trans     &trans      &trans  &trans                              &trans     &trans  &trans  &trans  &trans
-       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &none                               &none      &kp G   &kp C   &kp T   &none          &none
-&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                               &kp H      &kp D   &kp R   &kp N   &kp S          &none  &none
-       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &none    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
-                                         &none       &none   &mt LSHFT LSHFT  &mo 1    &mo 2     &kp SPACE  &none   &none
+                     &trans   &trans     &trans      &trans  &trans                                   &trans     &trans  &trans  &trans  &trans
+       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &none                                    &none      &kp G   &kp C   &kp T   &none          &none
+&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                    &kp H      &kp D   &kp R   &kp N   &kp S          &none  &none
+       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
+                                         &none       &none   &mt LSHFT LSHFT  &mo 1         &mo 2     &kp SPACE  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -136,14 +136,14 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                        &trans     &trans    &trans            &trans    &kp B                     &trans  &trans    &trans             &trans    &trans
-        &trans          &trans     &trans    &trans            &trans    &trans                    &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                    &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
-        &trans          &trans     &trans    &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans             &trans    &trans     &trans
-                                             &trans            &trans    &trans  &trans    &trans  &trans  &trans    &trans
+                        &trans     &trans    &trans            &trans    &kp B                       &trans  &trans    &trans             &trans    &trans
+        &trans          &trans     &trans    &trans            &trans    &trans                      &trans  &trans    &trans             &trans    &trans     &trans
+&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                      &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
+        &trans          &trans     &trans    &trans            &trans    &trans  &kp LGUI    &trans  &trans  &trans    &trans             &trans    &trans     &trans
+                                             &trans            &trans    &trans  &trans      &trans  &trans  &trans    &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp LS(TAB) TAB>, <&inc_dec_kp B W>;
         };
 
         alt {
@@ -156,7 +156,7 @@
                                                  &trans          &trans  &mo 5             &mo 4     &trans  &mo 6   &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp J K>, <&inc_dec_kp B W>;
         };
 
         // left mod
@@ -179,11 +179,11 @@
         nav_layer {
             display-name = "Num/Nav";
             bindings = <
-                &none      &none     &none             &none           &none                            &none            &none     &none      &none      &none
-        &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                         &none            &none     &none      &none      &none      &trans
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                        &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
-        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS       &trans    &trans  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
-                                     &trans            &mt LALT MINUS  &lt DOUBLE N0  &trans    &trans  &trans           &trans    &trans
+                &none      &none     &none             &none           &none                                      &none            &none     &none      &none      &none
+        &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                                   &none            &none     &none      &none      &none      &trans
+&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                                  &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS       &trans    &kp C_PLAY_PAUSE  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
+                                     &trans            &mt LALT MINUS  &lt DOUBLE N0  &trans    &trans            &trans           &trans    &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
@@ -194,11 +194,11 @@
         number {
             display-name = "numbers";
             bindings = <
-                &none      &none     &none      &none         &none                     &none      &none         &none         &none         &none
-        &trans  &none      &none     &none      &none         &none                     &none      &kp N7        &kp N8        &kp N9        &none   &trans
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LCTRL  &kp LEFT_GUI  &none                     &kp PLUS   &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
-        &trans  &none      &none     &none      &none         &none   &trans    &trans  &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &trans
-                                     &trans     &trans        &trans  &trans    &mo 7   &kp MINUS  &trans        &trans
+                &none      &none      &none      &none         &none                     &none      &none         &none         &none         &none
+        &trans  &none      &kp COMMA  &kp DOT    &trans        &none                     &none      &kp N7        &kp N8        &kp N9        &none   &trans
+&trans  &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &none                     &kp PLUS   &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
+        &trans  &none      &none      &none      &none         &none   &trans    &trans  &kp MINUS  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &trans
+                                      &trans     &trans        &trans  &trans    &mo 7   &kp MINUS  &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
