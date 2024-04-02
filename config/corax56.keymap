@@ -156,7 +156,7 @@
                                                  &trans          &trans  &mo 5             &mo 4     &trans  &mo 6   &trans     &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp J K>, <&inc_dec_kp B W>;
+            sensor-bindings = <&inc_dec_kp J K>, <&inc_dec_kp W B>;
         };
 
         // left mod
@@ -187,8 +187,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp UP_ARROW DOWN_ARROW>,
-                <&inc_dec_kp LEFT_ARROW RIGHT_ARROW>;
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
 
         // double mod
