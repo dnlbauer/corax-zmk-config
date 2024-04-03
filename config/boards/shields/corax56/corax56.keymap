@@ -166,11 +166,11 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-                &trans     &trans    &trans            &trans    &trans                      &trans     &trans      &trans      &trans      &trans
-        &trans  &none      &trans    &trans            &trans    &trans                      &none      &kp RA(N5)  &kp RA(N6)  &kp GRAVE   &kp LS(N7)     &none
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &asc_arr                    &kp EQUAL  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
-        &trans  &trans     &trans    &trans            &trans    &trans    &trans    &trans  &none      &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans
-                                     &trans            &trans    &trans    &trans    &trans  &mo 5      &trans      &trans
+                &trans     &trans    &trans            &trans    &trans                      &trans      &trans      &trans      &trans         &trans
+        &trans  &none      &trans    &trans            &trans    &trans                      &none       &kp RA(N5)  &kp RA(N6)  &kp GRAVE      &kp LS(N7)     &none
+&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &asc_arr                    &kp EQUAL   &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
+        &trans  &trans     &trans    &trans            &trans    &trans    &trans    &trans  &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans         &trans
+                                     &trans            &trans    &trans    &trans    &trans  &mo 5       &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
