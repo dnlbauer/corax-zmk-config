@@ -138,7 +138,7 @@
             bindings = <
                  &trans     &trans    &trans            &trans    &none                           &trans  &trans    &trans             &trans    &trans
         &trans   &trans     &trans    &trans            &trans    &trans                          &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                          &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
+&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &mo 9                           &mo 10  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
         &trans   &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI    &trans  &trans    &trans             &trans    &trans     &trans
                                       &trans            &trans    &trans  &trans      &kp ESCAPE  &trans  &trans    &trans
             >;
@@ -243,6 +243,34 @@
             sensor-bindings =
                 <&inc_dec_kp 0 0>,
                 <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+        };
+
+        media {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_NEXT C_PREV>;
+        };
+
+        undo-redo {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp DEL BACKSPACE>,
+                <&inc_dec_kp K_REDO K_UNDO>;
         };
     };
 };
