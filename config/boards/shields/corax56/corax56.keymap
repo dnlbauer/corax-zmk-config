@@ -211,11 +211,11 @@
         bt {
             display-name = "Adjust";
             bindings = <
-              &none       &none         &none         &none              &sys_reset                      &sys_reset  &none         &none         &none         &none
-       &none  &to 1       &none         &to 2         &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
-&none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &out OUT_TOG                    &none       &bt BT_NXT    &bt BT_PRV    &out OUT_TOG  &none  &none  &none
-       &none  &none       &none         &to 0         &none              &bt BT_CLR    &trans    &trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
-                                        &trans        &trans             &trans        &trans    &trans  &trans      &trans        &trans
+              &none   &none         &none         &none              &sys_reset                      &sys_reset  &none         &none         &none         &none
+       &none  &to 1   &none         &to 2         &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
+&none  &none  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &out OUT_TOG                    &none       &bt BT_NXT    &bt BT_PRV    &out OUT_TOG  &none  &none  &none
+       &none  &none   &none         &to 0         &none              &bt BT_CLR    &trans    &trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
+                                    &trans        &trans             &trans        &trans    &trans  &trans      &trans        &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
