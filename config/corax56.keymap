@@ -183,7 +183,7 @@
             bindings = <
                 &none      &none     &none             &none           &none                        &none            &none     &none      &none      &none
         &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                     &none            &none     &none      &none      &none      &trans
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+&trans  &mo 11  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
         &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS   &trans    &mo 8   &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
                                      &trans            &mt LALT MINUS  &lt 5 N0   &trans    &trans  &trans           &trans    &trans
             >;
@@ -271,6 +271,20 @@
             sensor-bindings =
                 <&inc_dec_kp DEL BACKSPACE>,
                 <&inc_dec_kp LS(LG(Y)) LG(Y)>;
+        };
+
+        layer_11 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp 0 0>,
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
     };
 };
