@@ -270,7 +270,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp DEL BACKSPACE>,
-                <&inc_dec_kp K_REDO K_UNDO>;
+                <&inc_dec_kp LS(LG(Z)) LG(Z)>;
         };
     };
 };
