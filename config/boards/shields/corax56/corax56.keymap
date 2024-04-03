@@ -109,7 +109,7 @@
         };
 
         sticky_adjust {
-            bindings = <&sl ADJUST>;
+            bindings = <&sl 6>;
 
             // sticky adjust layer on LALT+RALT
 
@@ -124,8 +124,8 @@
             display-name = "Colemak";
             bindings = <
                      &trans   &trans     &trans      &trans  &trans                                   &trans     &trans  &trans  &trans  &trans
-       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &none                                    &none      &kp G   &kp C   &kp T   &none          &none
-&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                    &kp H      &kp D   &kp R   &kp N   &kp S          &none  &none
+       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &kp Z                                    &kp F      &kp G   &kp C   &kp T   &kp Y          &none
+&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                    &kp H      &kp D   &kp R   &kp N   &kp S          &kp L  &none
        &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
                                          &none       &none   &mt LSHFT LSHFT  &mo 1         &mo 2     &kp SPACE  &none   &none
             >;
@@ -136,11 +136,11 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                        &trans     &trans    &trans            &trans    &kp B                         &trans  &trans    &trans             &trans    &trans
-        &trans          &trans     &trans    &trans            &trans    &trans                        &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &bt BT_CLR_ALL  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                        &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &trans  &trans
-        &trans          &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI  &trans  &trans    &trans             &trans    &trans     &trans
-                                             &trans            &trans    &trans  &trans      &trans    &trans  &trans    &trans
+                 &trans     &trans    &trans            &trans    &none                         &trans  &trans    &trans             &trans    &trans
+        &trans   &trans     &trans    &trans            &trans    &trans                        &trans  &trans    &trans             &trans    &trans     &trans
+&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &trans                        &trans  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
+        &trans   &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI  &trans  &trans    &trans             &trans    &trans     &trans
+                                      &trans            &trans    &trans  &trans      &trans    &trans  &trans    &trans
             >;
 
             sensor-bindings =
@@ -153,7 +153,7 @@
             bindings = <
                 &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans   &trans  &trans
         &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &trans   &kp Y   &trans     &trans
-&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &kp ESCAPE      &trans  &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &none   &trans
+&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &trans  &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &none   &trans
         &trans  &mo 3             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
                                                  &trans          &trans  &mo 5             &mo 4     &trans  &mo 6   &trans     &trans
             >;
@@ -166,11 +166,11 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-                &trans     &trans    &trans            &trans    &trans                      &trans      &trans      &trans      &trans      &trans
-        &trans  &none      &trans    &trans            &trans    &trans                      &none       &kp RA(N5)  &kp RA(N6)  &kp GRAVE   &kp LS(N7)     &none
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &asc_arr                    &kp EQUAL   &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
-        &trans  &trans     &trans    &trans            &trans    &trans    &trans    &trans  &none       &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans
-                                     &trans            &trans    &trans    &trans    &trans  &mo DOUBLE  &trans      &trans
+                &trans     &trans    &trans            &trans    &trans                      &trans     &trans      &trans      &trans      &trans
+        &trans  &none      &trans    &trans            &trans    &trans                      &none      &kp RA(N5)  &kp RA(N6)  &kp GRAVE   &kp LS(N7)     &none
+&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &asc_arr                    &kp EQUAL  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
+        &trans  &trans     &trans    &trans            &trans    &trans    &trans    &trans  &none      &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans
+                                     &trans            &trans    &trans    &trans    &trans  &mo 5      &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -181,11 +181,11 @@
         nav_layer {
             display-name = "Num/Nav";
             bindings = <
-                &none      &none     &none             &none           &none                                      &none            &none     &none      &none      &none
-        &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                                   &none            &none     &none      &none      &none      &trans
-&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                                  &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
-        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS       &trans    &kp C_PLAY_PAUSE  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
-                                     &trans            &mt LALT MINUS  &lt DOUBLE N0  &trans    &trans            &trans           &trans    &trans
+                &none      &none     &none             &none           &none                                  &none            &none     &none      &none      &none
+        &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                               &none            &none     &none      &none      &none      &trans
+&trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                              &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS   &trans    &kp C_PLAY_PAUSE  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
+                                     &trans            &mt LALT MINUS  &lt 5 N0   &trans    &trans            &trans           &trans    &trans
             >;
 
             sensor-bindings =
@@ -212,9 +212,9 @@
             display-name = "Adjust";
             bindings = <
               &none       &none         &none         &none              &sys_reset                      &sys_reset  &none         &none         &none         &none
-       &none  &to QWERTY  &none         &to WASD      &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
+       &none  &to 1       &none         &to 2         &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
 &none  &none  &bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &out OUT_TOG                    &none       &bt BT_NXT    &bt BT_PRV    &out OUT_TOG  &none  &none  &none
-       &none  &none       &none         &to COLEMAK   &none              &bt BT_CLR    &trans    &trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
+       &none  &none       &none         &to 0         &none              &bt BT_CLR    &trans    &trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
                                         &trans        &trans             &trans        &trans    &trans  &trans      &trans        &trans
             >;
 
