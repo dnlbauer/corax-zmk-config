@@ -109,7 +109,7 @@
         };
 
         sticky_adjust {
-            bindings = <&sl 6>;
+            bindings = <&sl 8>;
 
             // sticky adjust layer on LALT+RALT
 
@@ -123,14 +123,42 @@
         dvorak {
             display-name = "Colemak";
             bindings = <
-                     &trans   &trans     &trans      &trans  &trans                                 &trans     &trans  &trans  &trans  &trans
-       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &kp Z                                  &kp F      &kp G   &kp C   &kp T   &kp Y          &none
-&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                  &kp H      &kp D   &kp R   &kp N   &kp S          &kp L  &none
-       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &to 11  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
-                                         &none       &none   &mt LSHFT LSHFT  &mo 1         &mo 2   &kp SPACE  &none   &none
+                     &trans   &trans     &trans      &trans  &trans                                &trans     &trans  &trans  &trans  &trans
+       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &kp Z                                 &kp F      &kp G   &kp C   &kp T   &kp Y          &none
+&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                 &kp H      &kp D   &kp R   &kp N   &kp S          &kp L  &none
+       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &to 1  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
+                                         &none       &none   &mt LSHFT LSHFT  &mo 3         &mo 4  &kp SPACE  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+        };
+
+        layer_11 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 2   &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
+        };
+
+        layer_12 {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
 
         home {
@@ -138,7 +166,7 @@
             bindings = <
                  &trans     &trans    &trans            &trans    &none                           &trans  &trans    &trans             &trans    &trans
         &trans   &trans     &trans    &trans            &trans    &trans                          &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &mo 9                           &mo 10  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
+&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &mo 11                          &mo 12  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
         &trans   &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI    &trans  &trans    &trans             &trans    &trans     &trans
                                       &trans            &trans    &trans  &trans      &kp ESCAPE  &trans  &trans    &trans
             >;
@@ -154,14 +182,12 @@
                 &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans   &trans  &trans
         &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &trans   &kp Y   &trans     &trans
 &trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &trans  &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &none   &trans
-        &trans  &mo 3             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
-                                                 &trans          &trans  &mo 5             &mo 4     &trans  &mo 6   &trans     &trans
+        &trans  &mo 5             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
+                                                 &trans          &trans  &mo 7             &mo 6     &trans  &mo 8   &trans     &trans
             >;
 
             sensor-bindings = <&inc_dec_kp J K>, <&inc_dec_kp W B>;
         };
-
-        // left mod
 
         sym_layer {
             display-name = "Symbols";
@@ -170,30 +196,26 @@
         &trans  &none      &trans    &trans            &trans    &trans                      &none       &kp RA(N5)  &kp RA(N6)  &kp GRAVE      &kp LS(N7)     &none
 &trans  &trans  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &asc_arr                    &kp EQUAL   &kp LS(N8)  &kp LS(N9)  &kp LS(N0)     &kp LS(GRAVE)  &kp RA(N7)  &kp RA(N7)
         &trans  &trans     &trans    &trans            &trans    &trans    &trans    &trans  &kp LS(N4)  &kp RA(N8)  &kp RA(N9)  &kp BACKSLASH  &trans         &trans
-                                     &trans            &trans    &trans    &trans    &trans  &mo 5       &trans      &trans
+                                     &trans            &trans    &trans    &trans    &trans  &mo 7       &trans      &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
         };
-
-        // right mod
 
         nav_layer {
             display-name = "Num/Nav";
             bindings = <
                 &none      &none     &none             &none           &none                        &none            &none     &none      &none      &none
         &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                     &none            &none     &none      &none      &none      &trans
-&trans  &mo 8   &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
-        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS   &trans    &mo 8   &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
-                                     &trans            &mt LALT MINUS  &lt 5 N0   &trans    &trans  &trans           &trans    &trans
+&trans  &mo 10  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+        &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS   &trans    &mo 10  &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
+                                     &trans            &mt LALT MINUS  &lt 7 N0   &trans    &trans  &trans           &trans    &trans
             >;
 
             sensor-bindings =
                 <&inc_dec_kp DOWN_ARROW UP_ARROW>,
                 <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
-
-        // double mod
 
         number {
             display-name = "numbers";
@@ -202,7 +224,7 @@
         &trans  &none      &kp COMMA  &kp DOT    &trans        &none                     &none              &kp N7        &kp N8        &kp N9        &none   &trans
 &trans  &trans  &kp LSHFT  &kp LALT   &kp LCTRL  &kp LEFT_GUI  &none                     &kp RIGHT_BRACKET  &kp N4        &kp N5        &kp NUMBER_6  &kp N0  &trans  &trans
         &trans  &none      &none      &none      &none         &none   &trans    &trans  &kp SLASH          &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &none   &trans
-                                      &trans     &trans        &trans  &trans    &mo 7   &kp SLASH          &trans        &trans
+                                      &trans     &trans        &trans  &trans    &mo 9   &kp SLASH          &trans        &trans
             >;
 
             sensor-bindings =
@@ -214,7 +236,7 @@
             display-name = "Adjust";
             bindings = <
               &none   &none         &none         &none              &sys_reset                      &sys_reset  &none         &none         &none         &none
-       &none  &to 1   &none         &to 2         &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
+       &none  &to 3   &none         &to 4         &ext_power EP_TOG  &none                           &none       &none         &none         &none         &none  &none
 &none  &none  &trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2       &out OUT_TOG                    &none       &bt BT_NXT    &bt BT_PRV    &out OUT_TOG  &none  &none  &none
        &none  &none   &none         &to 0         &none              &bt BT_CLR    &trans    &trans  &trans      &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &none  &none
                                     &trans        &trans             &trans        &trans    &trans  &trans      &trans        &trans
@@ -273,34 +295,6 @@
             sensor-bindings =
                 <&inc_dec_kp DEL BACKSPACE>,
                 <&inc_dec_kp LS(LG(Y)) LG(Y)>;
-        };
-
-        layer_11 {
-            bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 12  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
-        };
-
-        layer_12 {
-            bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
-            >;
-
-            sensor-bindings =
-                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>,
-                <&inc_dec_kp DOWN_ARROW UP_ARROW>;
         };
     };
 };
