@@ -192,7 +192,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LS(TAB) TAB>,
+                <&inc_dec_kp TAB LS(TAB)>,
                 <&inc_dec_kp TAB RS(TAB)>;
         };
 
