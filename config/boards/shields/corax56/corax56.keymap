@@ -184,11 +184,11 @@
         home {
             display-name = "QWERTY";
             bindings = <
-                 &trans     &trans    &trans            &trans    &none                           &trans  &trans    &trans             &trans    &trans
-        &trans   &trans     &trans    &trans            &trans    &trans                          &trans  &trans    &trans             &trans    &trans     &trans
-&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &mo 12                          &mo 13  &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
-        &trans   &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI    &trans  &trans    &trans             &trans    &trans     &trans
-                                      &trans            &trans    &trans  &trans      &kp ESCAPE  &trans  &to 1     &to 2
+                 &trans     &trans    &trans            &trans    &none                           &trans     &trans    &trans             &trans    &trans
+        &trans   &trans     &trans    &trans            &trans    &trans                          &trans     &trans    &trans             &trans    &trans     &trans
+&trans  &kp ESC  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI  &mo 12                          &mo 13     &kp RGUI  &kp RIGHT_CONTROL  &kp RALT  &kp RSHFT  &kp ENTER  &trans
+        &trans   &trans     &trans    &trans            &trans    &trans  &kp LGUI    &kp RGUI    &trans     &trans    &trans             &trans    &trans     &trans
+                                      &trans            &trans    &trans  &trans      &kp ESCAPE  &kp ENTER  &to 1     &to 2
             >;
 
             sensor-bindings =
@@ -199,11 +199,11 @@
         alt {
             display-name = "alt";
             bindings = <
-                &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans   &trans  &trans
-        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &trans   &kp Y   &trans     &trans
-&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &trans  &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &trans  &trans
-        &trans  &mo 6             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
-                                                 &to 3           &mo 6   &mo 8             &mo 7     &trans  &mo 9   &to 1      &to 2
+                &trans            &trans         &trans          &trans  &trans                              &trans  &trans  &trans   &trans  &trans
+        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F   &trans   &kp Y   &trans     &trans
+&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &kp U   &kp LEFT_BRACKET                    &trans  &kp H   &kp DEL  &kp L   &kp MINUS  &trans  &trans
+        &trans  &mo 6             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B   &trans   &trans  &trans     &trans
+                                                 &to 3           &mo 6   &mo 8             &mo 7     &trans  &mo 9   &to 1   &to 2
             >;
 
             sensor-bindings = <&inc_dec_kp J K>, <&inc_dec_kp W B>;
@@ -293,11 +293,11 @@
 
         media {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &kp C_PLAY_PAUSE  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans            &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                              &trans  &trans      &trans            &trans          &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &trans      &trans            &trans          &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                              &trans  &kp C_PREV  &kp C_PLAY_PAUSE  &kp LA(C_NEXT)  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &mo 15    &kp C_PLAY_PAUSE  &trans  &trans      &trans            &trans          &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans            &trans  &trans      &trans
             >;
 
             sensor-bindings =
@@ -329,6 +329,18 @@
             >;
 
             sensor-bindings = <&inc_dec_kp 0 0>, <&inc_dec_kp DEL BACKSPACE>;
+        };
+
+        Brightness {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings = <&inc_dec_kp C_BRI_DN C_BRI_UP>;
         };
     };
 };
