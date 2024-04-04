@@ -123,11 +123,11 @@
         dvorak {
             display-name = "Colemak";
             bindings = <
-                     &trans   &trans     &trans      &trans  &trans                                   &trans     &trans  &trans  &trans  &trans
-       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &kp Z                                    &kp F      &kp G   &kp C   &kp T   &kp Y          &none
-&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                    &kp H      &kp D   &kp R   &kp N   &kp S          &kp L  &none
-       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &kp C_PP  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
-                                         &none       &none   &mt LSHFT LSHFT  &mo 1         &mo 2     &kp SPACE  &none   &none
+                     &trans   &trans     &trans      &trans  &trans                                  &trans     &trans  &trans  &trans  &trans
+       &none         &none    &kp COMMA  &kp PERIOD  &kp P   &kp Z                                   &kp F      &kp G   &kp C   &kp T   &kp Y          &none
+&none  &out OUT_TOG  &kp A    &kp O      &kp E       &kp I   &kp U                                   &kp H      &kp D   &kp R   &kp N   &kp S          &kp L  &none
+       &none         &kp TAB  &kp Q      &kp J       &kp K   &kp X            &kp K_MUTE    &tog 11  &kp B      &kp M   &kp W   &kp V   &kp BACKSPACE  &none
+                                         &none       &none   &mt LSHFT LSHFT  &mo 1         &mo 2    &kp SPACE  &none   &none
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -183,7 +183,7 @@
             bindings = <
                 &none      &none     &none             &none           &none                        &none            &none     &none      &none      &none
         &trans  &kp SLASH  &kp N7    &kp N8            &kp N9          &kp STAR                     &none            &none     &none      &none      &none      &trans
-&trans  &mo 11  &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
+&trans  &mo 8   &kp LSHFT  &kp LALT  &kp LEFT_CONTROL  &kp LGUI        &kp EQUAL                    &kp HOME         &kp LEFT  &kp UP     &kp DOWN   &kp RIGHT  &kp END  &trans
         &trans  &ud_tilde  &kp N4    &kp N5            &kp N6          &kp PLUS   &trans    &mo 8   &kp PAUSE_BREAK  &trans    &kp PG_UP  &kp PG_DN  &none      &trans
                                      &trans            &mt LALT MINUS  &lt 5 N0   &trans    &trans  &trans           &trans    &trans
             >;
@@ -205,7 +205,9 @@
                                       &trans     &trans        &trans  &trans    &mo 7   &kp SLASH          &trans        &trans
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
+            sensor-bindings =
+                <&inc_dec_kp C_VOL_DN C_VOL_UP>,
+                <&inc_dec_kp C_NEXT C_PREV>;
         };
 
         bt {
@@ -231,7 +233,7 @@
             >;
         };
 
-        scroll-arrow-horizo {
+        scroll-arrow-vert {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
@@ -275,16 +277,16 @@
 
         layer_11 {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &trans          &trans        &trans            &trans        &trans                     &trans  &trans  &trans  &trans  &trans
+        &trans  &trans          &trans        &trans            &trans        &trans                     &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &kp LEFT_SHIFT  &kp LEFT_ALT  &kp LEFT_CONTROL  &kp LEFT_GUI  &trans                     &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans          &trans        &trans            &trans        &trans  &trans    &tog 11  &trans  &trans  &trans  &trans  &trans  &trans
+                                              &trans            &trans        &trans  &trans    &trans   &trans  &trans  &trans
             >;
 
             sensor-bindings =
-                <&inc_dec_kp 0 0>,
-                <&inc_dec_kp DOWN_ARROW UP_ARROW>;
+                <&inc_dec_kp DOWN_ARROW UP_ARROW>,
+                <&inc_dec_kp RIGHT_ARROW LEFT_ARROW>;
         };
     };
 };
