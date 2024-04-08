@@ -49,6 +49,20 @@
             #binding-cells = <2>;
             tapping-term-ms = <10>;
         };
+
+        scroll1and0: scroll1and0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SCROLL1AND0";
+            #binding-cells = <0>;
+            bindings = <&to 1>, <&to 0>;
+        };
+
+        scroll2and0: scroll2and0 {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SCROLL2AND0";
+            #binding-cells = <0>;
+            bindings = <&to 2>, <&to 0>;
+        };
     };
 
     macros {
@@ -157,11 +171,11 @@
 
         left-right {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 2   &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll2and0  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans
             >;
 
             sensor-bindings =
@@ -171,11 +185,11 @@
 
         up-down {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll1and0  &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans
             >;
 
             sensor-bindings =
