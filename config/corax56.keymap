@@ -384,7 +384,7 @@
 
             sensor-bindings =
                 <&inc_dec_kp LA(LG(LC(PAGE_DOWN))) LA(LC(LG(PAGE_UP)))>,
-                <&inc_dec_kp LA(LS(F5)) LA(F5)>;
+                <&inc_dec_kp LA(F5) LA(LS(F5))>;
         };
     };
 };
