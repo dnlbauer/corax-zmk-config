@@ -126,6 +126,27 @@
             tap-ms = <10>;
             bindings = <&kp MINUS &kp LS(DOT)>;
         };
+
+        sch: sch {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp C &kp H>;
+            label = "SCH";
+        };
+
+        jonasgoogle: jonasgoogle {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp J &kp O &kp N &kp A &kp S &kp DOT &kp R &kp U &kp L &kp I &kp K &kp AT &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "JONASGOOGLE";
+        };
+
+        m7onas1ukas: m7onas1ukas {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp N7 &kp O &kp N &kp A &kp S &kp N1 &kp U &kp K &kp A &kp S &kp AT &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
+            label = "M7ONAS1UKAS";
+        };
     };
 
     combos {
@@ -160,7 +181,7 @@
         dvorak {
             display-name = "dvorak";
             bindings = <
-                    &tog 16  &none      &none       &none   &none                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+                    &tog 16  &none      &none       &none   &mo 17                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
        &tog 3       &mo 16   &kp COMMA  &kp PERIOD  &kp P   &kp Z                           &kp F         &kp G         &kp C         &kp T         &kp Y          &none
 &none  &key_repeat  &kp A    &kp O      &kp E       &kp I   &kp U                           &kp H         &kp D         &kp R         &kp N         &kp S          &kp L  &kp ENTER
        &kp ESC      &kp TAB  &kp Q      &kp J       &kp K   &kp X      &kp K_MUTE    &to 1  &kp B         &kp M         &kp W         &kp V         &kp BACKSPACE  &none
@@ -231,7 +252,7 @@
             display-name = "alt";
             bindings = <
                 &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans   &trans  &trans
-        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &trans   &kp Y   &trans     &trans
+        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &sch     &kp Y   &trans     &trans
 &trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &kp U   &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &trans  &trans
         &trans  &mo 6             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
                                                  &to 3           &mo 6   &mo 8             &mo 7     &trans  &mo 9   &to 1      &to 2
@@ -386,6 +407,16 @@
             sensor-bindings =
                 <&inc_dec_kp LA(LG(LC(PAGE_DOWN))) LA(LC(LG(PAGE_UP)))>,
                 <&inc_dec_kp LA(F5) LA(LS(F5))>;
+        };
+
+        mail {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &jonasgoogle  &m7onas1ukas  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans        &trans        &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans        &trans        &trans
+            >;
         };
     };
 };
