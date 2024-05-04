@@ -14,8 +14,8 @@
 ---
 include:
   - board: nice_nano_v2
-    shield: corax56_left nice_view
+    shield: corax_left nice_view
   - board: nice_nano_v2
-    shield: corax56_right nice_view
+    shield: corax_right nice_view
     #- board: nice_nano_v2
     #shield: settings_reset

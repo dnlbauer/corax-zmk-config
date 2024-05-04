@@ -1,4 +1,4 @@
-#include "corax56.dtsi"
+#include "corax.dtsi"
 
 &default_transform {
     col-offset = <6>;

@@ -1,5 +1,5 @@
-config SHIELD_CORAX56_LEFT
-    def_bool $(shields_list_contains,corax56_left)
+config SHIELD_CORAX_LEFT
+    def_bool $(shields_list_contains,corax_left)
 
-config SHIELD_CORAX56_RIGHT
-    def_bool $(shields_list_contains,corax56_right)
+config SHIELD_CORAX_RIGHT
+    def_bool $(shields_list_contains,corax_right)

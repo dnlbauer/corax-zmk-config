@@ -1,8 +1,8 @@
 {
-  "id": "corax56",
-  "name": "corax56",
-  "keyboard_name": "Corax56",
-  "url": "https://github.com/dnlbauer/corax56-keyboard",
+  "id": "corax",
+  "name": "corax",
+  "keyboard_name": "Corax",
+  "url": "https://github.com/dnlbauer/corax-keyboard",
   "maintainer": "",
   "layouts": {
     "LAYOUT": {
