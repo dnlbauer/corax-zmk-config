@@ -202,7 +202,7 @@
                 &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll2and0  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &to 0     &scroll2and0  &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans
             >;
 
@@ -216,7 +216,7 @@
                 &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                          &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &scroll1and0  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &to 0     &scroll1and0  &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans        &trans  &trans  &trans
             >;
 
@@ -438,7 +438,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
@@ -450,7 +450,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
@@ -462,7 +462,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
@@ -476,7 +476,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
