@@ -132,8 +132,8 @@
             #binding-cells = <0>;
             bindings = <&kp S &kp C &kp H>;
             label = "SCH";
-            wait-ms = <35>;
-            tap-ms = <35>;
+            wait-ms = <12>;
+            tap-ms = <25>;
         };
 
         jonasgoogle: jonasgoogle {
@@ -141,8 +141,8 @@
             #binding-cells = <0>;
             bindings = <&kp J &kp O &kp N &kp A &kp S &kp DOT &kp R &kp U &kp L &kp I &kp K &kp LA(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "JONASGOOGLE";
-            wait-ms = <35>;
-            tap-ms = <35>;
+            wait-ms = <12>;
+            tap-ms = <25>;
         };
 
         m7onas1ukas: m7onas1ukas {
@@ -150,8 +150,8 @@
             #binding-cells = <0>;
             bindings = <&kp N7 &kp O &kp N &kp A &kp S &kp N1 &kp U &kp K &kp A &kp S &kp LA(L) &kp G &kp O &kp O &kp G &kp L &kp E &kp M &kp A &kp I &kp L &kp DOT &kp C &kp O &kp M>;
             label = "M7ONAS1UKAS";
-            wait-ms = <35>;
-            tap-ms = <35>;
+            wait-ms = <12>;
+            tap-ms = <25>;
         };
     };
 
@@ -404,7 +404,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 0   &trans  &trans  &trans  &trans  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
 
@@ -427,7 +427,7 @@
             bindings = <
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &to 3   &to 16  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to 20  &to 21  &trans  &to 19  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
