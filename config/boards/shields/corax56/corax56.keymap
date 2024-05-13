@@ -426,7 +426,7 @@
         scrolling {
             bindings = <
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &to 23  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &to 3   &to 16  &to 22  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to 20  &to 21  &trans  &to 19  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
@@ -483,6 +483,20 @@
             sensor-bindings =
                 <&inc_dec_kp LA(LC(LG(DOWN))) LA(LC(LG(UP)))>,
                 <&inc_dec_kp LA(LC(LG(RIGHT))) LA(LC(LG(LEFT)))>;
+        };
+
+        wheel-vscode-problems {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LA(F5) LA(LS(F5))>,
+                <&inc_dec_kp LA(F8) LA(LS(F8))>;
         };
     };
 };
