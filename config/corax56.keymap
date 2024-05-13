@@ -428,7 +428,7 @@
                 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
         &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &to 23  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans  &trans                    &trans  &to 3   &to 16  &to 22  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to 20  &to 21  &trans  &to 19  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &to 20  &to 21  &to 24  &to 19  &trans  &trans
                                 &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans
             >;
         };
@@ -497,6 +497,20 @@
             sensor-bindings =
                 <&inc_dec_kp LA(F5) LA(LS(F5))>,
                 <&inc_dec_kp LA(F8) LA(LS(F8))>;
+        };
+
+        wheel-vscode-editor-size {
+            bindings = <
+                &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LC(W))    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+            >;
+
+            sensor-bindings =
+                <&inc_dec_kp LS(LA(LC(LG(DOWN_ARROW)))) LS(LA(LC(LG(UP_ARROW))))>,
+                <&inc_dec_kp LA(LS(LC(LG(RIGHT)))) LS(LA(LC(LG(LEFT))))>;
         };
     };
 };
