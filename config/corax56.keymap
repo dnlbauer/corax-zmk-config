@@ -523,8 +523,8 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LA(LC(MINUS)) LA(LC(LS(MINUS)))>,
-                <&inc_dec_kp LC(LS(MINUS)) LC(MINUS)>;
+                <&inc_dec_kp LA(LC(SLASH)) LA(LC(LS(SLASH)))>,
+                <&inc_dec_kp LS(LC(SLASH)) LC(SLASH)>;
         };
     };
 };
