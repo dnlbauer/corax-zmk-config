@@ -467,7 +467,7 @@
             >;
 
             sensor-bindings =
-                <&inc_dec_kp LS(N) N>,
+                <&inc_dec_kp N LS(N)>,
                 <&inc_dec_kp LA(N9) LA(N8)>;
         };
 
@@ -501,11 +501,11 @@
 
         wheel-vscode-editor-size {
             bindings = <
-                &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans                           &trans  &trans  &trans  &trans  &trans  &trans  &trans
-        &trans  &trans  &trans  &trans  &trans  &trans  &kp LS(LC(W))    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
-                                &trans  &trans  &trans  &trans           &trans  &trans  &trans  &trans
+                &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans                       &trans  &trans  &trans  &trans  &trans  &trans  &trans
+        &trans  &trans  &trans  &trans  &trans  &trans  &kp LG(J)    &to 1   &trans  &trans  &trans  &trans  &trans  &trans
+                                &trans  &trans  &trans  &trans       &trans  &trans  &trans  &trans
             >;
 
             sensor-bindings =
