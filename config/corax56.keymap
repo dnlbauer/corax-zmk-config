@@ -255,10 +255,10 @@
         alt {
             display-name = "alt";
             bindings = <
-                &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans   &trans  &trans
-        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &sch     &kp Y   &trans     &trans
-&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &kp U   &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL  &kp L   &kp MINUS  &trans  &trans
-        &trans  &mo 6             &trans         &trans          &kp X   &kp X             &trans    &trans  &kp B   &kp B      &trans   &trans  &trans     &trans
+                &trans            &trans         &trans          &trans  &trans                              &trans  &trans     &trans     &trans  &trans
+        &trans  &trans            &kp LS(N1)     &kp UNDERSCORE  &kp Z   &trans                              &trans  &kp F      &sch       &kp Y   &trans     &trans
+&trans  &trans  &kp SINGLE_QUOTE  &kp SEMICOLON  &trans          &kp U   &kp LEFT_BRACKET                    &trans  &kp ENTER  &kp DEL    &kp L   &kp MINUS  &trans  &trans
+        &trans  &mo 6             &kp LS(NUHS)   &kp LS(N7)      &kp X   &kp X             &trans    &trans  &kp B   &kp B      &kp SLASH  &trans  &trans     &trans
                                                  &to 3           &mo 6   &mo 8             &mo 7     &trans  &mo 9   &to 1      &to 2
             >;
 
