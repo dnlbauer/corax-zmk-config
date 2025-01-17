@@ -4,6 +4,9 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 
+#include <dt-bindings/zmk/pointing.h>
+
+
 #define COLEMAK 0
 #define QWERTY 1
 #define WASD 2
@@ -122,7 +125,7 @@
                                          &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp RALT  &kp RGUI
             >;
 
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
+            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp SCRL_DOWN SCRL_UP>;
         };
 
         qwerty_layer {
