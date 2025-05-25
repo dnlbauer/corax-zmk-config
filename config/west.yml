@@ -11,6 +11,6 @@ manifest:
       revision: main
     - name: zmk-keyboards-corax
       remote: dnlbauer
-      revision: zmk_studio
+      revision: main
   self:
     path: config
