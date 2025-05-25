@@ -1,9 +1,10 @@
 on:
   push:
-    branches: [ "main", "corax56-work" ]
+    branches: [ "main" ]
   pull_request_target:
-    branches: [ "main", "corax56-work" ]
+    branches: [ "main" ]
   workflow_dispatch:
+
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
