@@ -5,6 +5,7 @@
 This is my personal [ZMK](https://zmk.dev/) firmware configuration for the [Corax](https://github.com/dnlbauer/corax-keyboard).
 
 The keymap optimised for US international.
+It supports [ZMK Studio](https://zmk.studio/).
 
 ## Using this Config as a template
 
