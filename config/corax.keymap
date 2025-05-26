@@ -109,6 +109,16 @@
             bindings = <&kp MINUS &kp LS(DOT)>;
         };
 
+        // ctrl + shift
+        ctrl_shft: ctrl_shft {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&macro_press &kp LCTRL &kp LSHFT>
+            , <&macro_pause_for_release>
+            , <&macro_release &kp LCTRL &kp LSHFT>
+            ;
+        };
+
     };
 
     combos {
@@ -137,7 +147,7 @@
          &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud_sqt  &kp RC(RA(F13)) 
 &kp ESC  &kp LCTRL       &kp A   &kp R   &kp S     &kp T     &kp G                                 &kp M        &kp N     &kp E      &kp I    &kp O    &kp BSPC         &kp RC(RA(F13))
          &mt LSHFT LBRC  &kp Z   &kp X   &kp C     &kp D     &kp V          &kp C_MUTE  &kp C_PP   &kp K        &kp H     &kp COMMA  &kp DOT  &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp RALT  &kp RGUI
+                                         &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp RALT  &ctrl_shft
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_msc SCRL_DOWN SCRL_UP>;
