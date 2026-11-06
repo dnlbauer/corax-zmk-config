@@ -79,13 +79,13 @@
     combos {
         compatible = "zmk,combos";
 
-        wf_capsword {
+        tg_capsword {
             bindings = <&caps_word>;
-            // caps on W+F: "wf" is a near-nonexistent bigram, prior-idle blocks mid-word misfires
-            key-positions = <12 13>;
+            // caps on T+G: both are index-finger keys, so normal typing never presses them together
+            key-positions = <27 28>;
             timeout-ms = <40>;
             require-prior-idle-ms = <150>;
-            layers = <COLEMAK QWERTY>;  // on WASD these are Q+W
+            layers = <COLEMAK QWERTY>;  // on WASD these are D+F
         };
 
         zx_numlock {
