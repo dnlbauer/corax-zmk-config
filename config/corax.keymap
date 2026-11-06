@@ -47,49 +47,13 @@
     };
 
     macros {
-        // undead `
-        ud_grave: ud_grave {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
+        // undead: tap a US-intl dead key, then SPACE to emit the literal character
+        ud: undead {
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
             wait-ms = <10>;
             tap-ms = <10>;
-            bindings = <&kp GRAVE &kp SPACE>;
-        };
-
-        // undead ~
-        ud_tilde: ud_tilde {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp TILDE &kp SPACE>;
-        };
-
-        // undead ^
-        ud_caret: ud_caret {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp CARET &kp SPACE>;
-        };
-
-        // undead '
-        ud_sqt: ud_sqt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp SQT &kp SPACE>;
-        };
-
-        // undead "
-        ud_dqt: ud_dqt {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <10>;
-            tap-ms = <10>;
-            bindings = <&kp LS(SQT) &kp SPACE>;
+            bindings = <&macro_param_1to1 &kp MACRO_PLACEHOLDER &kp SPACE>;
         };
 
         // ascii arrow ->
@@ -136,7 +100,7 @@
             display-name = "Colemak";
             bindings = <
                          &kp N1  &kp N2  &kp N3    &kp N4                                          &kp N5       &kp N6    &kp N7     &kp N8   &kp N9   &kp N0
-         &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud_sqt  &kp RC(RA(F13)) 
+         &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud SQT  &kp RC(RA(F13)) 
 &kp ESC  &kp LCTRL       &kp A   &kp R   &kp S     &kp T     &kp G                                 &kp M        &kp N     &kp E      &kp I    &kp O    &kp BSPC         &kp RC(RA(F13))
          &mt LSHFT LBRC  &kp Z   &kp X   &kp C     &kp D     &kp V          &kp C_MUTE  &kp C_PP   &kp K        &kp H     &kp COMMA  &kp DOT  &kp DEL  &mt RSHFT RBRC
                                          &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &ctrl_shft  &kp RALT
@@ -175,11 +139,11 @@
         sym_layer {
             display-name = "Symbols";
             bindings = <
-                &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                           &kp F6      &kp F7    &kp F8     &kp F9     &kp F10
-        &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &none       &kp PIPE  &ud_caret  &kp SLASH  &kp RA(N5)  &kp F11
-&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &none       &ud_dqt   &kp UNDER  &kp LBKT   &kp RBKT    &kp F12  &trans
-        &trans  &none   &ud_grave  &kp AT     &kp AMPS   &kp RC(RA(F14))  &trans  &trans  &none       &kp HASH  &kp QMARK  &kp EXCL   &trans      &trans
-                                   &trans     &trans     &trans           &trans  &trans  &kp LGUI    &trans    &trans
+                &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                           &kp F6      &kp F7       &kp F8     &kp F9     &kp F10
+        &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &none       &kp PIPE     &ud CARET  &kp SLASH  &kp RA(N5)  &kp F11
+&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &none       &ud LS(SQT)  &kp UNDER  &kp LBKT   &kp RBKT    &kp F12  &trans
+        &trans  &none   &ud GRAVE  &kp AT     &kp AMPS   &kp RC(RA(F14))  &trans  &trans  &none       &kp HASH     &kp QMARK  &kp EXCL   &trans      &trans
+                                   &trans     &trans     &trans           &trans  &trans  &kp LGUI    &trans       &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp PG_DN PG_UP>;
@@ -192,7 +156,7 @@
                 &kp F1     &kp F2  &kp F3  &kp F4         &kp F5                         &kp F6           &kp F7     &kp F8     &kp F9     &kp F10
         &trans  &kp MINUS  &kp N7  &kp N8  &kp N9         &kp STAR                       &kp INS          &kp HOME   &kp END    &kp PSCRN  &none     &trans
 &trans  &trans  &kp DOT    &kp N1  &kp N2  &kp N3         &kp EQUAL                      &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI  &trans  &trans
-        &trans  &ud_tilde  &kp N4  &kp N5  &kp N6         &kp PLUS       &trans  &trans  &kp PAUSE_BREAK  &kp PG_DN  &kp PG_UP  &none      &trans    &trans
+        &trans  &ud TILDE  &kp N4  &kp N5  &kp N6         &kp PLUS       &trans  &trans  &kp PAUSE_BREAK  &kp PG_DN  &kp PG_UP  &none      &trans    &trans
                                    &trans  &mt LALT MINUS &mt LGUI N0  &trans  &trans  &trans           &trans     &trans
             >;
             
