@@ -147,7 +147,7 @@
          &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud_sqt  &kp RC(RA(F13)) 
 &kp ESC  &kp LCTRL       &kp A   &kp R   &kp S     &kp T     &kp G                                 &kp M        &kp N     &kp E      &kp I    &kp O    &kp BSPC         &kp RC(RA(F13))
          &mt LSHFT LBRC  &kp Z   &kp X   &kp C     &kp D     &kp V          &kp C_MUTE  &kp C_PP   &kp K        &kp H     &kp COMMA  &kp DOT  &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp RALT  &ctrl_shft
+                                         &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &ctrl_shft  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_msc SCRL_DOWN SCRL_UP>;
@@ -170,7 +170,7 @@
             display-name = "WASD";
             bindings = <
                    &kp TILDE  &kp N1  &kp N2  &kp N3  &kp N4                  &trans  &trans  &trans  &trans  &trans
-        &kp ESC    &kp N5     &kp Q   &kp W   &kp E   &kp R                   &trans  &trans  &trans  &trans  &trans  &trans
+        &kp ESC    &kp G      &kp Q   &kp W   &kp E   &kp R                   &trans  &trans  &trans  &trans  &trans  &trans
 &trans  &kp TAB    &kp LCTRL  &kp A   &kp S   &kp D   &kp F                   &trans  &trans  &trans  &trans  &trans  &trans  &trans
         &kp M      &kp LSHIFT &kp Z   &kp X   &kp C   &kp V   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                       &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
