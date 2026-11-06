@@ -14,7 +14,7 @@ or use it as a base to create your own configuration with a custom
 keymap:
 
 1. Fork this repository
-2. Make sure the `config/west.yaml` contains a reference to the [zmk-keyboards-corax](https://github.com/dnlbauer/zmk-keyboards-corax) module
+2. Make sure the `config/west.yml` contains a reference to the [zmk-keyboards-corax](https://github.com/dnlbauer/zmk-keyboards-corax) module
 
 ```yaml
 manifest:
