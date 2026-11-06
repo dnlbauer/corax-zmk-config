@@ -88,10 +88,13 @@
     combos {
         compatible = "zmk,combos";
 
-        gm_capsword {
+        wf_capsword {
             bindings = <&caps_word>;
-            // caps on G+M
-            key-positions = <28 29>;
+            // caps on W+F: "wf" is a near-nonexistent bigram, prior-idle blocks mid-word misfires
+            key-positions = <12 13>;
+            timeout-ms = <40>;
+            require-prior-idle-ms = <150>;
+            layers = <COLEMAK QWERTY>;  // on WASD these are Q+W
         };
 
         sticky_adjust {
