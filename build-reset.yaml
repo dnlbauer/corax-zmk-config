@@ -1,0 +1,6 @@
+# Build matrix for the settings_reset firmware (clears BT bonds / split pairing).
+# Built by the workflow when `target` is `settings-reset` or `both`.
+---
+include:
+  - board: nice_nano_v2
+    shield: settings_reset

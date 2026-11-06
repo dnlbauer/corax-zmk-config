@@ -4,11 +4,28 @@ on:
   pull_request_target:
     branches: [ "main" ]
   workflow_dispatch:
+    inputs:
+      target:
+        description: "What to build"
+        type: choice
+        options: [ firmware, settings-reset, both ]
+        default: firmware
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
   cancel-in-progress: true
 
 jobs:
+  # push/PR runs have no inputs, so they fall through to firmware only
   build:
+    if: inputs.target != 'settings-reset'
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+
+  # runs after `build`: ZMK's merge step globs every `artifact-*` in the run, so parallel jobs would steal each other's files
+  build-reset:
+    needs: build
+    if: ${{ !cancelled() && (inputs.target == 'settings-reset' || inputs.target == 'both') }}
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    with:
+      build_matrix_path: build-reset.yaml
+      archive_name: settings-reset
