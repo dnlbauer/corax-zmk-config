@@ -38,6 +38,15 @@
             bindings = <&mo>, <&kp>;
         };
 
+        // balanced: a fast roll like `-o` stays a tap, hold + another key is the mod
+        mtb: mod_tap_balanced {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&kp>, <&kp>;
+        };
+
         inc_dec_msc: sensor_rotation_scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -93,7 +102,7 @@
          &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud SQT  &kp RC(RA(F13)) 
 &kp ESC  &kp LCTRL       &kp A   &kp R   &kp S     &kp T     &kp G                                 &kp M        &kp N     &kp E      &kp I    &kp O    &kp BSPC         &kp RC(RA(F13))
          &mt LSHFT LBRC  &kp Z   &kp X   &kp C     &kp D     &kp V          &kp C_MUTE  &kp C_PP   &kp K        &kp H     &kp COMMA  &kp DOT  &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &kp LALT  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp LC(LSHFT)  &kp RALT
+                                         &kp LGUI  &mtb LALT MINUS  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp LC(LSHFT)  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_msc SCRL_DOWN SCRL_UP>;
@@ -131,8 +140,8 @@
             bindings = <
                 &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                           &kp F6      &kp F7       &kp F8     &kp F9     &kp F10
         &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &none       &kp PIPE     &ud CARET  &kp SLASH  &kp RA(N5)  &kp F11
-&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &none       &ud LS(SQT)  &kp UNDER  &kp LBKT   &kp RBKT    &kp F12  &trans
-        &trans  &none   &ud GRAVE  &kp AT     &kp AMPS   &kp RC(RA(F14))  &trans  &trans  &none       &kp HASH     &kp QMARK  &kp EXCL   &trans      &trans
+&trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &kp LT      &ud LS(SQT)  &kp UNDER  &kp LBKT   &kp RBKT    &kp F12  &trans
+        &trans  &none   &ud GRAVE  &kp AT     &kp AMPS   &kp RC(RA(F14))  &trans  &trans  &kp GT      &kp HASH     &kp QMARK  &kp EXCL   &trans      &trans
                                    &trans     &trans     &trans           &trans  &trans  &kp LGUI    &trans       &trans
             >;
 
@@ -146,8 +155,8 @@
                 &kp F1     &kp F2  &kp F3  &kp F4         &kp F5                         &kp F6           &kp F7     &kp F8     &kp F9     &kp F10
         &trans  &kp MINUS  &kp N7  &kp N8  &kp N9         &kp STAR                       &kp INS          &kp HOME   &kp END    &kp PSCRN  &none     &trans
 &trans  &trans  &kp DOT    &kp N1  &kp N2  &kp N3         &kp EQUAL                      &kp LEFT         &kp DOWN   &kp UP     &kp RIGHT  &kp SEMI  &trans  &trans
-        &trans  &ud TILDE  &kp N4  &kp N5  &kp N6         &kp PLUS       &trans  &trans  &kp PAUSE_BREAK  &kp PG_DN  &kp PG_UP  &none      &trans    &trans
-                                   &trans  &mt LALT MINUS &mt LGUI N0  &trans  &trans  &trans           &trans     &trans
+        &trans  &kp COMMA  &kp N4  &kp N5  &kp N6         &kp PLUS       &trans  &trans  &kp PAUSE_BREAK  &kp PG_DN  &kp PG_UP  &ud TILDE  &trans    &trans
+                                   &trans  &trans         &mt LGUI N0  &trans  &trans  &trans           &trans     &trans
             >;
             
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp C_PREV C_NEXT>;
