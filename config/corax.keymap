@@ -47,6 +47,15 @@
             bindings = <&kp>, <&kp>;
         };
 
+        // hold: momentary layer, tap: toggle layer. balanced so a fast hold + digit is not a toggle
+        mo_tog: mo_tog {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&tog>;
+        };
+
         inc_dec_msc: sensor_rotation_scroll {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -102,7 +111,7 @@
          &kp TAB         &kp Q   &kp W   &kp F     &kp P     &kp B                                 &kp J        &kp L     &kp U      &kp Y    &ud SQT  &kp RC(RA(F13)) 
 &kp ESC  &kp LCTRL       &kp A   &kp R   &kp S     &kp T     &kp G                                 &kp M        &kp N     &kp E      &kp I    &kp O    &kp BSPC         &kp RC(RA(F13))
          &mt LSHFT LBRC  &kp Z   &kp X   &kp C     &kp D     &kp V          &kp C_MUTE  &kp C_PP   &kp K        &kp H     &kp COMMA  &kp DOT  &kp DEL  &mt RSHFT RBRC
-                                         &kp LGUI  &mtb LALT MINUS  &lthp SYM ESC  &kp SPACE   &kp ENTER  &lt NAV ESC  &kp LC(LSHFT)  &kp RALT
+                                         &kp LGUI  &mtb LALT MINUS  &lthp SYM ESC  &kp SPACE   &kp ENTER  &mo_tog NAV NAV  &kp LC(LSHFT)  &kp RALT
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_msc SCRL_DOWN SCRL_UP>;
