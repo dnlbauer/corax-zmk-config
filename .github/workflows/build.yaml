@@ -19,13 +19,13 @@ jobs:
   # push/PR runs have no inputs, so they fall through to firmware only
   build:
     if: inputs.target != 'settings-reset'
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85 # keep in sync with config/west.yml
 
   # runs after `build`: ZMK's merge step globs every `artifact-*` in the run, so parallel jobs would steal each other's files
   build-reset:
     needs: build
     if: ${{ !cancelled() && (inputs.target == 'settings-reset' || inputs.target == 'both') }}
-    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85 # keep in sync with config/west.yml
     with:
       build_matrix_path: build-reset.yaml
       archive_name: settings-reset

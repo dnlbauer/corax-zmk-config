@@ -8,7 +8,7 @@ manifest:
     - name: zmk
       import: app/west.yml
       remote: zmkfirmware
-      revision: main
+      revision: 4dd95d7840eb3d5a3f59bb29fbf1ab054715ef85 # ZMK main w/ Zephyr 4.1
     - name: zmk-keyboards-corax
       remote: dnlbauer
       revision: main
