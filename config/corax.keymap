@@ -151,7 +151,7 @@
             display-name = "Symbols";
             bindings = <
                 &kp F1  &kp F2     &kp F3     &kp F4     &kp F5                           &kp F6      &kp F7       &kp F8     &kp F9     &kp F10
-        &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &none       &kp PIPE     &ud CARET  &kp SLASH  &kp RA(N5)  &kp F11
+        &trans  &none   &kp BSLH   &kp PRCNT  &kp DLLR   &kp RA(LS(S))                    &ud CARET   &kp PIPE     &ud TILDE  &kp SLASH  &kp RA(N5)  &kp F11
 &trans  &trans  &none   &kp LPAR   &kp RPAR   &kp COLON  &asc_arr                         &kp LT      &ud LS(SQT)  &kp UNDER  &kp LBKT   &kp RBKT    &kp F12  &trans
         &trans  &none   &ud GRAVE  &kp AT     &kp AMPS   &kp RC(RA(F14))  &trans  &trans  &kp GT      &kp HASH     &kp QMARK  &kp EXCL   &trans      &trans
                                    &trans     &trans     &trans           &trans  &trans  &kp LGUI    &trans       &trans
